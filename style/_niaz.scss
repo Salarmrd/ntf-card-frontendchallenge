@@ -1,0 +1,110 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 85%;
+    max-width: 20rem;
+    height: auto;
+    background-color: $VerydarkbluecardBG;
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    box-shadow: 0 1rem 1rem 1rem rgba(0, 0, 0, 0.037),
+      0 1rem 2rem 1rem rgba(0, 0, 0, 0.05);
+
+    .img-wrapper {
+      position: relative;
+      cursor: pointer;
+
+      // .hero {
+      //   width: 100%;
+      //   border-radius: 1rem;
+      // }
+
+      .color-overlay {
+        background-color: $Cyan;
+        opacity: 0.5;
+        position: absolute;
+        border-radius: 0.4rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        margin-bottom: 5px;
+      }
+
+      .view {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+
+      &:hover {
+        .color-overlay,
+        .view {
+          display: block;
+        }
+      }
+    }
+  }
+  .avatar {
+    padding-top: 12px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    img {
+      width: 24px;
+      border: 1.5px solid rgb(255, 255, 255);
+      border-radius: 25rem;
+      margin-right: 13px;
+    }
+    span {
+      font-size: 13px;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 26px 0;
+    div {
+      img {
+        margin-bottom: -4px;
+        margin-right: 4px;
+      }
+      .eth {
+        color: $Cyan;
+        font-weight: bold;
+      }
+      .days {
+        color: $Grayishblue;
+      }
+    }
+  }
+
+  .hero {
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+  .content {
+    padding: 20px 0;
+    // text-align: center;
+    p {
+      margin-top: 15px;
+      // text-align: center;
+    }
+  }
+}
+.jule-jule {
+  color: $White;
+  &:hover {
+    color: $Cyan;
+    cursor: pointer;
+  }
+}
